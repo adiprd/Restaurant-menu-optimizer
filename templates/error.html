@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Menu Optimizer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            color: #FAF0E6;
+        }
+        
+        .error-container {
+            background: rgba(250, 240, 230, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            border: 1px solid #D2B48C;
+        }
+        
+        .error-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #FAF0E6;
+        }
+        
+        .home-btn {
+            background: #8B4513;
+            color: #FAF0E6;
+            border: 1px solid #A0522D;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .home-btn:hover {
+            background: #A0522D;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h1>Data Loading Error</h1>
+        <p>{{ message }}</p>
+        <p>Please check if the data files exist in the data directory.</p>
+        <button class="home-btn" onclick="goHome()">
+            <i class="fas fa-home"></i> Return to Home
+        </button>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
